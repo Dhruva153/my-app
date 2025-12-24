@@ -3,27 +3,53 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sample Page</title>
+  <title>E-Learning Platform</title>
   <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="College landing page sample">
 </head>
 <body>
-  <header>
-    <h1>Sample HTML Page</h1>
-    <p class="lead">A minimal template with CSS and JS.</p>
-    <p style="margin-top:0.5rem"><a href="login.html">Login</a> • <a href="signup.html">Sign-up</a></p>
+  <div class="topbar">📞 &nbsp; email@example.com &nbsp; • &nbsp; WORK HOURS: 9:30 AM - 4:00 PM</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="logo.png" alt="logo" class="logo">
+        <div class="titles">
+          <div class="school">My Learning.</div>
+          <div class="college">E-Learning</div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">ACADEMICS</a></li>
+          <li><a href="#">ADMISSIONS</a></li>
+          <li><a href="#">STAFF</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="btn login" href="login.html">LOGIN</a>
+      </div>
+    </div>
   </header>
-  <main>
-    <section class="card">
-      <h2>Interactive Counter</h2>
-      <p>Count: <span id="count">0</span></p>
-      <button id="inc">Increment</button>
-      <button id="dec">Decrement</button>
-      <button id="reset">Reset</button>
-    </section>
-  </main>
+
+  <section class="hero" style="background-image: url('../image/hero.jpg')">
+    <div class="hero-overlay">
+      <div class="hero-inner">
+        <h1>Welcome to E-Learning</h1>
+        <p class="lead-hero">Committed to academic excellence and student success.</p>
+      </div>
+    </div>
+  </section>
+
+  <aside class="admissions-tab">A<br>D<br>M<br>I<br>S<br>S<br>I<br>O<br>N<br>S</aside>
+  <button class="chat-btn">Chat with us</button>
+
   <footer>
-    <small>© Sample</small>
+    <small>© copy right 2025-26 </small>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="../script.js"></script>
 </body>
 </html>
