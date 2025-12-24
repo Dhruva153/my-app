@@ -1,0 +1,91 @@
+/* Theme and layout for mobile-first auth pages */
+:root{
+   --bg-start: #123456;
+  --bg-mid: #6b26b7;
+  --bg-end: #29003a;
+  --bg-overlay: radial-gradient(circle at 10% 10%, rgba(255,120,200,0.12), transparent 18%), radial-gradient(circle at 80% 80%, rgba(120,80,255,0.08), transparent 20%);
+  --bg-image: url('background.jpg'); /* <-- put your image file here */
+  --bg-blend: overlay;
+  --card: #fff;
+  --accent: #6b3fb6;
+  --muted: #666;
+  --text-dark: #222;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:
+    var(--bg-overlay),
+    var(--bg-image),
+    linear-gradient(180deg,var(--bg-start) 0%, var(--bg-mid) 35%, var(--bg-end) 100%);
+  background-size: cover, cover, auto;
+  background-repeat: no-repeat;
+  background-blend-mode: var(--bg-blend), normal;
+  background-image :url('background.jpg');
+  
+  
+}
+/* decorative shapes */
+body::before{
+  content:"";
+  position:fixed;
+  left:-10%;
+  bottom:-20%;
+  width:70vmax;
+  height:70vmax;
+  background: radial-gradient(circle at 10% 10%, rgba(255,120,200,0.12), transparent 18%), radial-gradient(circle at 80% 80%, rgba(120,80,255,0.08), transparent 20%);
+  transform:rotate(-15deg);
+  pointer-events:none;
+}
+.topbar{background:#3a0c7a;color:#fff;text-align:center;padding:0.55rem 0;font-size:0.9rem;position:sticky;top:0}
+header{padding:0.8rem 1rem 0;text-align:center}
+header h1{margin:0;font-size:1.25rem}
+header .lead{margin:0.4rem 0 0;color:rgba(255,255,255,0.9);font-size:0.95rem}
+main{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:1.25rem 1rem 2rem}
+.card{
+  background:var(--card);
+  padding:1rem 1rem 1.25rem;
+  border-radius:10px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+  max-width:420px;
+  width:100%;
+  color:var(--text-dark);
+}
+.field{margin-bottom:0.9rem}
+.field label{display:block;font-size:0.85rem;margin-bottom:0.5rem;color:var(--muted)}
+.input-row{display:flex;align-items:center;border:1px solid #ddd;padding:0.45rem 0.6rem;border-radius:6px;background:#fff}
+.input-row .icon{width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;margin-right:0.6rem;color:#5a5a5a}
+.input-row input{flex:1;border:0;outline:none;font-size:0.95rem;padding:0.2rem 0;color:var(--text-dark)}
+.input-row input::placeholder{color:#9c9c9c}
+.actions{margin-top:0.6rem;margin-bottom:0.2rem}
+button.primary{width:100%;background:var(--accent);color:#fff;border:none;padding:0.85rem;border-radius:8px;font-weight:700;cursor:pointer}
+button.primary:hover{filter:brightness(0.96)}
+.links{display:flex;justify-content:space-between;font-size:0.9rem;margin-top:0.55rem}
+.links a{color:#5b2fb9;text-decoration:none}
+.msg{margin-top:0.6rem;color:#b00020;font-size:0.9rem}
+footer{padding:0.6rem;text-align:center;color:rgba(255,255,255,0.7)}
+
+/* signup specific tweaks */
+.gender-row{display:flex;gap:1rem;align-items:center}
+.gender-row label{display:flex;align-items:center;gap:0.4rem;color:var(--muted)}
+.checkbox-row{display:flex;align-items:center;gap:0.6rem;font-size:0.9rem;color:var(--muted)}
+
+/* smaller devices adjustments */
+@media (max-width:420px){
+  header h1{font-size:1.1rem}
+  .card{margin-top:0.6rem;padding:0.9rem}
+  .input-row{padding:0.45rem}
+}
+
+@keyframes gradientShift {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
