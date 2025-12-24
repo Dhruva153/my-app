@@ -35,7 +35,7 @@ if (signupForm){
     ev.preventDefault();
     const msg = document.getElementById('msg');
     showMsg(msg,'');
-    const fullname = document.getElementById('fullname').value.trim();
+    const fullname = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const dob = document.getElementById('dob').value;
     const genderEls = document.getElementsByName('gender');
@@ -98,5 +98,6 @@ if (loginForm){
 document.documentElement.style.setProperty('--bg-image', 'url("image/Screenshot 2025-12-22 205125.jpg")');
 // or remove image:
 document.documentElement.style.setProperty('--bg-image', 'none');
+
 
 export {};
