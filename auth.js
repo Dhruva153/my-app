@@ -35,7 +35,7 @@ if (signupForm){
     ev.preventDefault();
     const msg = document.getElementById('msg');
     showMsg(msg,'');
-    const fullname = document.getElementById('name').value.trim();
+    const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const dob = document.getElementById('dob').value;
     const photo = document.getElementById('photoUrl').value.trim();
@@ -102,4 +102,5 @@ document.documentElement.style.setProperty('--bg-image', 'none');
 
 
 export {};
+
 
