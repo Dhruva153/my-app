@@ -38,6 +38,7 @@ if (signupForm){
     const fullname = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const dob = document.getElementById('dob').value;
+    const photo = document.getElementById('photoUrl').value.trim();
     const genderEls = document.getElementsByName('gender');
     let gender = '';
     for (const g of genderEls) if (g.checked){ gender = g.value; break; }
@@ -101,3 +102,4 @@ document.documentElement.style.setProperty('--bg-image', 'none');
 
 
 export {};
+
